@@ -36,7 +36,7 @@ A checkbox on the to-do list marks the task as completed. Keep in mind that a co
 
 ### Links
 
-- Live Site URL Open [Challenge](https://deploy-preview-1--heroic-druid-0c7bb2.netlify.app/) with your browser to see the result.
+- Live Site URL Open [Challenge](https://scintillating-gelato-2554b1.netlify.app/) with your browser to see the result.
 
 ## My process
 
