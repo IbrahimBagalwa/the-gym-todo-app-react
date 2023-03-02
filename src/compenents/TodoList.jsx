@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaTrash } from "react-icons/fa";
-const TodoList = ({ id, todo, handleDeleteTask }) => {
+const TodoList = ({ id, task, handleDeleteTask }) => {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <span className="flex gap-4 items-center justify-center">
@@ -8,7 +8,7 @@ const TodoList = ({ id, todo, handleDeleteTask }) => {
       <span
         className={`flex-grow ${isChecked && "line-through text-gray-500"} `}
       >
-        {todo && todo[0]?.toUpperCase() + todo.slice(1, todo.length)}
+        {task && task[0]?.toUpperCase() + task.slice(1, task.length)}
       </span>
       <span className="text-xl py-2 px-4 flex gap-2">
         <span

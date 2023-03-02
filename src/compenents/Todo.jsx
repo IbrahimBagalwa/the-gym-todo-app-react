@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TodoList from "./TodoList";
 
 const Todo = () => {
-  const [todo, setTodo] = useState("");
+  const [task, setTask] = useState("");
   const [tasks, setTasks] = useState(
     () => JSON.parse(localStorage.getItem("tasks")) || []
   );
@@ -12,12 +12,12 @@ const Todo = () => {
   }, [tasks]);
 
   const addTodo = () => {
-    if (todo) {
-      const newTask = { id: new Date().getTime().toString(), todo };
+    if (task) {
+      const newTask = { id: new Date().getTime().toString(), task };
       setTasks((task) => {
         return [...task, newTask];
       });
-      setTodo("");
+      setTask("");
     }
   };
   const handleDeleteTask = (id) => {
@@ -38,8 +38,8 @@ const Todo = () => {
             className="flex-grow px-2 outline-none h-full"
             placeholder="Add todo..."
             name="text"
-            value={todo}
-            onChange={(e) => setTodo(e.target.value)}
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
           />
 
           <span
